@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Home Console</title>
-<link rel="stylesheet" href="styles/fonts.css">
-<link rel="stylesheet" href="styles/colors.css">
-<link rel="stylesheet" href="styles/mobile.css">
-<link rel="stylesheet" href="styles/desktop.css">
-<link rel="stylesheet" href="styles/defaults.css">
+<link rel="stylesheet" href={{ url_for('static', filename='styles/fonts.css') }}>
+<link rel="stylesheet" href={{ url_for('static', filename='styles/colors.css') }}>
+<link rel="stylesheet" href={{ url_for('static', filename='styles/mobile.css') }}>
+<link rel="stylesheet" href={{ url_for('static', filename='styles/desktop.css') }}>
+<link rel="stylesheet" href={{ url_for('static', filename='styles/defaults.css') }}>
 <link href="https://fonts.googleapis.com/css?family=Blinker&display=swap" rel="stylesheet">
-<script src="scripts/paho-mqtt.js" type="module"></script>
-<script src="scripts/controller.js" type="text/javascript"></script>
+<script src={{ url_for('static', filename="scripts/jquery-3.4.1.min.js")}} type="text/javascript"></script>
+<script src={{ url_for('static', filename="scripts/controller.js")}} type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -24,7 +25,7 @@
             </div>
             <div class="stdin">
                 <div class="button" id="benchlight">
-                    <img src="media/img/lightbulb.png"  class="bulb"/>
+                    <img src={{ url_for('static', filename="media/img/lightbulb.png")}}  class="bulb"/>
                     <center>Lab Overhead</center>
                 </div>
             </div>
