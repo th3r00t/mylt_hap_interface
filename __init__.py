@@ -23,6 +23,10 @@ app.config.from_object(debug_state(True))
 @app.route("/")
 def index():
     return render_template('index.html')
+@app.route("/controller")
+def controller():
+    print("Hello")
+    return "render_template('index.html')"
 
 if __name__ == "__main__":
     app.run()
