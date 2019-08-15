@@ -37,7 +37,7 @@ def index():
 @app.route("/controller", methods=['GET', 'POST'])
 def controller():
     mqtt.publish('lighting/benchlight', '1')
-    return
+    return render_template('index.html')
 
 if __name__ == "__main__":
     app.run()
