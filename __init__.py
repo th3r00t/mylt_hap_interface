@@ -35,7 +35,7 @@ def logging(client, userdata, level, buf):
 def index():
     return render_template('index.html')
 
-@app.route("homeserver/controller", methods=['GET', 'POST'])
+@app.route("/controller", methods=['GET', 'POST'])
 def controller():
     if (not mqtt.connected):
         mqtt._connect()
