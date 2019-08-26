@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
     $("div#benchlight").click(function() {
-        $.post('/controller') // , $(this).id)
+        console.log('toggle')
+        rt = $.post('/controller') // , $(this).id)
+        console.log(rt.responseText)
     });
-
 });
